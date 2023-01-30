@@ -4,6 +4,7 @@ from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from huggingface_hub import login
 
 #Setting Hugging face orgAPI key
+# .streamlit/secrets.toml should consist org_token= "YOUR_ORGANIZATION_TOKEN"
 organization_token = st.secrets['org_token']
 
 
