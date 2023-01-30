@@ -21,10 +21,14 @@ model.eval()
 model.to(device)
 
 prompt = st.text_input("Enter your prompt:")
-max_new_tokens = st.number_input("Max new tokens:", value=100, min_value=0, max_value=1000)
-do_sample = st.checkbox("Do sample?", value=True)
-temperature = st.slider("Temperature:", min_value=0.0, max_value=1.0, value=0.6)
-top_p = st.slider("Top P:", min_value=0.0, max_value=1.0, value=1.0)
+
+st.sidebar.title("Settings")
+
+max_new_tokens = st.sidebar.number_input("Max New Tokens", value=100, min_value=0, max_value=1000)
+do_sample= st.sidebar.checkbox("Do Sample?", value=True) # Whether or not to use sampling 
+temperature =st.sidebar.slider("Temperature", min_value=0.0, max_value=1.0, value=0.6) #The value used to module the next token probabilities
+top_p= st.sidebar.slider("Top P", min_value=0.0, max_value=1.0, value=1.0) #  If set to float < 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation
+
 
 if st.button("Generate"):
     generator = pipeline('text-generation', tokenizer=tokenizer, model=model, device=device)
