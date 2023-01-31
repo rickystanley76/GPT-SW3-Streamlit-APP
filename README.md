@@ -1,4 +1,4 @@
-# GPT-SW3-Streamlit-APP
+# GPT-SW3-Streamlit-APP- ver2
 ![image](https://user-images.githubusercontent.com/1774630/215736477-c805fe7e-8090-4a93-8353-cf104aedb5f9.png)
 
 In this Simple streamlit app we have shown how to use AI-Sweden GPT-SW3 model.
