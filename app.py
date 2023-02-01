@@ -61,11 +61,13 @@ if st.button("Generate"):
     st.markdown(f"<p style='color: green'>Character Normalised Perplexity: {char_norm_perplexity:.4f}</p>", unsafe_allow_html=True)
 
     with st.expander("What is character normalised perplexity? "):
-        st.write("Character Normalized Perplexity is a measure of the quality of a text generation model. It represents how "+
-                 "well the model can predict the next character in a sequence given the previous characters. It is a way of "+
-                 "evaluating the model's ability to generate coherent and meaningful sequences of characters. The score is "+
-                 "calculated by dividing the total number of characters by the total log likelihood of the model's predictions. " +
-                 "A lower score indicates a better model, as it means the model is able to predict the next character with high accuracy. ")
+        st.markdown('''
+                Character Normalized Perplexity is a measure of the quality of a text generation model. It represents how
+                well the model can predict the next character in a sequence given the previous characters. It is a way of
+                evaluating the model's ability to generate coherent and meaningful sequences of characters. The score is
+                calculated by dividing the total number of characters by the total log likelihood of the model's predictions.
+                **:blue[A lower score indicates a better model, as it means the model is able to predict the next character with high accuracy]**.
+                ''')         
         st.write("https://medium.com/towards-data-science/perplexity-in-language-models-87a196019a94 ")
     
 
